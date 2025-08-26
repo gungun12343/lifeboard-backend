@@ -21,7 +21,7 @@ app.use(cors({origin: "https://lifeboard-frontend.onrender.com", credentials: tr
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
-app.options("*", cors());
+app.options("/*", cors());
 
 // IMPORTANT for cookies behind proxy (Render/Cloudflare)
 app.set("trust proxy", 1);
