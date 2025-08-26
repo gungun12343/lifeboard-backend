@@ -21,10 +21,10 @@ app.use(cors({origin: "https://lifeboard-frontend.onrender.com", credentials: tr
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
-app.options("/*", cors());
+// app.options("/*", cors());
 
-// IMPORTANT for cookies behind proxy (Render/Cloudflare)
-app.set("trust proxy", 1);
+// // IMPORTANT for cookies behind proxy (Render/Cloudflare)
+// app.set("trust proxy", 1);
 
 const DB_URL = process.env.DB_URL;
 const MONGO_URL = "mongodb://127.0.0.1:27017/lifeboard";
